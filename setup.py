@@ -24,6 +24,6 @@ bla = setup(
         'healpy',
         'pygedm',
         'camb',
-        'pyccl>=2.3.0',
+        'pyccl==2.3.0',
     ],
 )
