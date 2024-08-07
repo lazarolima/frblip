@@ -12,9 +12,9 @@ bla = setup(
     python_requires='>=3.10',
     install_requires=[
         'toolz',
-        'dill>=0.3.6',
-        'numba>=0.55',
-        'numpy>=1.21',
+        'dill==0.3.6',
+        'numba==0.55',
+        'numpy==1.21',
         'pandas',
         'sparse==0.13.0',
         'xarray==0.20.1',
