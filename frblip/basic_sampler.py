@@ -18,6 +18,10 @@ from sparse import COO
 from .observation import Interferometry, Observation
 from .radio_telescope import RadioTelescope
 
+# Added by Lázaro 16/08/24
+import concurrent.futures
+from functools import partial
+##############################
 
 class BasicSampler(object):
     def __len__(self):
@@ -127,7 +131,7 @@ class BasicSampler(object):
         )
 
         self.observations[obs_name] = observation
-
+    
     def observe(
         self,
         telescopes: RadioTelescope | dict[str, RadioTelescope],
@@ -166,6 +170,56 @@ class BasicSampler(object):
             self._observe(telescopes, name, sparse, dtype)
 
         sys.stdout = old_target
+    
+    ###################### Added by Lázaro 16/08/24
+
+    """def observe(
+        self,
+        telescopes: RadioTelescope | dict[str, RadioTelescope],
+        name: str | None = None,
+        location: coordinates.EarthLocation | None = None,
+        sparse: bool = True,
+        dtype: type = numpy.double,
+        verbose: bool = True,
+        n_cores: int = 1  # Adiciona o parâmetro n_cores
+    ):
+        if not hasattr(self, 'observations'):
+            self.observations = {}
+
+        old_target = sys.stdout
+        sys.stdout = old_target if verbose else open(os.devnull, 'w')
+
+        if isinstance(self.altaz, types.MethodType):
+            if isinstance(location, coordinates.EarthLocation):
+                loc = location
+            elif isinstance(location, str):
+                if location in telescopes:
+                    loc = telescopes[location].location
+                else:
+                    loc = coordinates.EarthLocation.of_site(location)
+                self.altaz = self.altaz_from_location(loc)
+            elif location is not None:
+                error = '{} is not a valid location'.format(location)
+                raise TypeError(error)
+
+        if isinstance(telescopes, dict):
+            if n_cores > 1:
+                # Paraleliza a observação dos telescópios usando ThreadPoolExecutor
+                with concurrent.futures.ThreadPoolExecutor(max_workers=n_cores) as executor:
+                    futures = [executor.submit(self._observe, telescope, name, sparse, dtype) for name, telescope in telescopes.items()]
+                    for future in concurrent.futures.as_completed(futures):
+                        future.result()  # Aguarda a conclusão e verifica exceções
+            else:
+                # Observa telescópios em modo serial
+                for name, telescope in telescopes.items():
+                    self._observe(telescope, name, sparse, dtype)
+        elif isinstance(telescopes, RadioTelescope):
+            if name is None:
+                name = f'OBS_{len(self.observations)}'
+            self._observe(telescopes, name, sparse, dtype)
+
+        sys.stdout = old_target"""
+    #############################################################
 
     def interferometry(
         self,
