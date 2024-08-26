@@ -1,0 +1,112 @@
+0	91322	0.06	42.42	85.94	345.06	153.04	True	False	False	False
+0	284204	0.60	43.51	86.47	314.46	1161.46	False	False	False	False
+0	370725	0.13	42.62	85.98	311.17	124.37	True	False	False	False
+0	27655	0.71	43.87	84.72	331.66	643.10	False	False	False	False
+0	91322	0.06	42.42	85.94	345.06	153.04	True	False	False	False
+0	284204	0.60	43.51	86.47	314.46	1161.46	False	False	False	False
+0	370725	0.13	42.62	85.98	311.17	124.37	True	False	False	False
+0	27655	0.71	43.87	84.72	331.66	643.10	False	False	False	False
+0	178864	0.37	43.56	86.22	315.58	431.81	True	-9.914532258396193 deg	59.63323922337912 deg	327.4185333292074
+0	178864	0.37	43.56	86.22	315.58	431.81	342.81252570646063	-9.914532258396193 deg	59.63323922337912 deg	327.4185333292074
+0	36659	0.57	43.19	84.64	149.75	589.89	556.2698254280416	-11.673311596175642 deg	86.26817427694924 deg	526.5355580832668
+0	178864	0.37	43.56	86.22	315.58	431.81	True	False	False	False
+0	36659	0.57	43.19	84.64	149.75	589.89	False	False	False	False
+0	252577	0.49	43.67	84.79	9.10	444.09	True	False	False	False
+0	329507	0.71	43.63	88.22	312.69	585.57	False	False	False	False
+0	90980	1.61	44.70	80.31	341.08	1711.12	False	False	False	False
+0	260909	0.36	43.45	86.11	344.96	560.13	True	False	False	False
+0	359263	0.51	43.58	86.27	156.54	521.49	False	False	False	False
+0	116504	0.15	42.10	86.57	238.25	195.44	False	False	False	False
+0	223803	0.39	42.79	86.79	201.87	585.96	False	False	False	False
+0	150271	0.07	42.65	88.19	53.90	190.86	True	False	False	False
+1	252577	0.49	43.67	84.79	9.10	444.09	True	False	False	False
+1	329507	0.71	43.63	88.22	312.69	585.57	False	False	False	False
+1	90980	1.61	44.70	80.31	341.08	1711.12	False	False	False	False
+1	260909	0.36	43.45	86.11	344.96	560.13	True	False	False	False
+1	359263	0.51	43.58	86.27	156.54	521.49	False	False	False	False
+1	116504	0.15	42.10	86.57	238.25	195.44	False	False	False	False
+1	223803	0.39	42.79	86.79	201.87	585.96	False	False	False	False
+1	150271	0.07	42.65	88.19	53.90	190.86	True	False	False	False
+0	252577	0.49	43.67	84.79	9.10	444.09	True	False	False	False
+0	329507	0.71	43.63	88.22	312.69	585.57	False	False	False	False
+0	90980	1.61	44.70	80.31	341.08	1711.12	False	False	False	False
+0	260909	0.36	43.45	86.11	344.96	560.13	True	False	False	False
+0	359263	0.51	43.58	86.27	156.54	521.49	False	False	False	False
+0	116504	0.15	42.10	86.57	238.25	195.44	False	False	False	False
+0	223803	0.39	42.79	86.79	201.87	585.96	False	False	False	False
+0	150271	0.07	42.65	88.19	53.90	190.86	True	False	False	False
+1	252577	0.49	43.67	84.79	9.10	444.09	True	False	False	False
+1	329507	0.71	43.63	88.22	312.69	585.57	False	False	False	False
+1	90980	1.61	44.70	80.31	341.08	1711.12	False	False	False	False
+1	260909	0.36	43.45	86.11	344.96	560.13	True	False	False	False
+1	359263	0.51	43.58	86.27	156.54	521.49	False	False	False	False
+1	116504	0.15	42.10	86.57	238.25	195.44	False	False	False	False
+1	223803	0.39	42.79	86.79	201.87	585.96	False	False	False	False
+1	150271	0.07	42.65	88.19	53.90	190.86	True	False	False	False
+0 	 252577 	 0.49 	 43.67 	 84.79 	 9.10 	 444.09 	 True 	 False 	 False 	 False 
+ 0 	 329507 	 0.71 	 43.63 	 88.22 	 312.69 	 585.57 	 False 	 False 	 False 	 False 
+ 0 	 90980 	 1.61 	 44.70 	 80.31 	 341.08 	 1711.12 	 False 	 False 	 False 	 False 
+ 0 	 260909 	 0.36 	 43.45 	 86.11 	 344.96 	 560.13 	 True 	 False 	 False 	 False 
+ 0 	 359263 	 0.51 	 43.58 	 86.27 	 156.54 	 521.49 	 False 	 False 	 False 	 False 
+ 0 	 116504 	 0.15 	 42.10 	 86.57 	 238.25 	 195.44 	 False 	 False 	 False 	 False 
+ 0 	 223803 	 0.39 	 42.79 	 86.79 	 201.87 	 585.96 	 False 	 False 	 False 	 False 
+ 0 	 150271 	 0.07 	 42.65 	 88.19 	 53.90 	 190.86 	 True 	 False 	 False 	 False 
+ 1 	 252577 	 0.49 	 43.67 	 84.79 	 9.10 	 444.09 	 True 	 False 	 False 	 False 
+ 1 	 329507 	 0.71 	 43.63 	 88.22 	 312.69 	 585.57 	 False 	 False 	 False 	 False 
+ 1 	 90980 	 1.61 	 44.70 	 80.31 	 341.08 	 1711.12 	 False 	 False 	 False 	 False 
+ 1 	 260909 	 0.36 	 43.45 	 86.11 	 344.96 	 560.13 	 True 	 False 	 False 	 False 
+ 1 	 359263 	 0.51 	 43.58 	 86.27 	 156.54 	 521.49 	 False 	 False 	 False 	 False 
+ 1 	 116504 	 0.15 	 42.10 	 86.57 	 238.25 	 195.44 	 False 	 False 	 False 	 False 
+ 1 	 223803 	 0.39 	 42.79 	 86.79 	 201.87 	 585.96 	 False 	 False 	 False 	 False 
+ 1 	 150271 	 0.07 	 42.65 	 88.19 	 53.90 	 190.86 	 True 	 False 	 False 	 False 
+ 0 	 35905 	 0.36 	 43.05 	 85.64 	 63.39 	 294.42 	 False 	 False 	 False 	 False 
+ 0 	 15716 	 0.44 	 42.88 	 83.64 	 121.07 	 328.99 	 False 	 False 	 False 	 False 
+ 0 	 252577 	 0.49 	 43.67 	 84.79 	 9.10 	 444.09 	 True 	 False 	 False 	 False 
+ 0 	 329507 	 0.71 	 43.63 	 88.22 	 312.69 	 585.57 	 False 	 False 	 False 	 False 
+ 0 	 90980 	 1.61 	 44.70 	 80.31 	 341.08 	 1711.12 	 False 	 False 	 False 	 False 
+ 0 	 260909 	 0.36 	 43.45 	 86.11 	 344.96 	 560.13 	 True 	 False 	 False 	 False 
+ 0 	 359263 	 0.51 	 43.58 	 86.27 	 156.54 	 521.49 	 False 	 False 	 False 	 False 
+ 0 	 116504 	 0.15 	 42.10 	 86.57 	 238.25 	 195.44 	 False 	 False 	 False 	 False 
+ 0 	 223803 	 0.39 	 42.79 	 86.79 	 201.87 	 585.96 	 False 	 False 	 False 	 False 
+ 0 	 150271 	 0.07 	 42.65 	 88.19 	 53.90 	 190.86 	 True 	 True 	 False 	 False 
+ 1 	 252577 	 0.49 	 43.67 	 84.79 	 9.10 	 444.09 	 True 	 False 	 False 	 False 
+ 1 	 329507 	 0.71 	 43.63 	 88.22 	 312.69 	 585.57 	 False 	 False 	 False 	 False 
+ 1 	 90980 	 1.61 	 44.70 	 80.31 	 341.08 	 1711.12 	 False 	 False 	 False 	 False 
+ 1 	 260909 	 0.36 	 43.45 	 86.11 	 344.96 	 560.13 	 True 	 False 	 False 	 False 
+ 1 	 359263 	 0.51 	 43.58 	 86.27 	 156.54 	 521.49 	 False 	 False 	 False 	 False 
+ 1 	 116504 	 0.15 	 42.10 	 86.57 	 238.25 	 195.44 	 False 	 False 	 False 	 False 
+ 1 	 223803 	 0.39 	 42.79 	 86.79 	 201.87 	 585.96 	 False 	 False 	 False 	 False 
+ 1 	 150271 	 0.07 	 42.65 	 88.19 	 53.90 	 190.86 	 True 	 True 	 False 	 False 
+ 0 	 252577 	 0.49 	 43.67 	 84.79 	 9.10 	 444.09 	 True 	 False 	 False 	 False 
+ 0 	 329507 	 0.71 	 43.63 	 88.22 	 312.69 	 585.57 	 False 	 False 	 False 	 False 
+ 0 	 90980 	 1.61 	 44.70 	 80.31 	 341.08 	 1711.12 	 False 	 False 	 False 	 False 
+ 0 	 260909 	 0.36 	 43.45 	 86.11 	 344.96 	 560.13 	 True 	 False 	 False 	 False 
+ 0 	 359263 	 0.51 	 43.58 	 86.27 	 156.54 	 521.49 	 False 	 False 	 False 	 False 
+ 0 	 116504 	 0.15 	 42.10 	 86.57 	 238.25 	 195.44 	 False 	 False 	 False 	 False 
+ 0 	 223803 	 0.39 	 42.79 	 86.79 	 201.87 	 585.96 	 False 	 False 	 False 	 False 
+ 0 	 150271 	 0.07 	 42.65 	 88.19 	 53.90 	 190.86 	 True 	 False 	 False 	 False 
+ 1 	 252577 	 0.49 	 43.67 	 84.79 	 9.10 	 444.09 	 True 	 False 	 False 	 False 
+ 1 	 329507 	 0.71 	 43.63 	 88.22 	 312.69 	 585.57 	 False 	 False 	 False 	 False 
+ 1 	 90980 	 1.61 	 44.70 	 80.31 	 341.08 	 1711.12 	 False 	 False 	 False 	 False 
+ 1 	 260909 	 0.36 	 43.45 	 86.11 	 344.96 	 560.13 	 True 	 False 	 False 	 False 
+ 1 	 359263 	 0.51 	 43.58 	 86.27 	 156.54 	 521.49 	 False 	 False 	 False 	 False 
+ 1 	 116504 	 0.15 	 42.10 	 86.57 	 238.25 	 195.44 	 False 	 False 	 False 	 False 
+ 1 	 223803 	 0.39 	 42.79 	 86.79 	 201.87 	 585.96 	 False 	 False 	 False 	 False 
+ 1 	 150271 	 0.07 	 42.65 	 88.19 	 53.90 	 190.86 	 True 	 False 	 False 	 False 
+ 0 	 35905 	 0.36 	 43.05 	 86.49 	 56.10 	 294.42 	 False 	 False 	 False 	 False 
+ 0 	 35905 	 0.36 	 43.05 	 86.49 	 56.10 	 294.42 	 False 	 False 	 False 	 False 
+ 0 	 84508 	 0.37 	 43.74 	 86.66 	 231.18 	 614.50 	 True 	 False 	 False 	 False 
+ 0 	 64030 	 0.48 	 43.85 	 87.05 	 202.11 	 672.03 	 True 	 False 	 False 	 False 
+ 0 	 84508 	 0.37 	 43.74 	 86.66 	 231.18 	 614.50 	 True 	 False 	 False 	 False 
+ 0 	 64030 	 0.48 	 43.85 	 87.05 	 202.11 	 672.03 	 True 	 False 	 False 	 False 
+ 0 	 300116 	 0.26 	 43.85 	 84.53 	 331.24 	 295.90 	 True 	 False 	 False 	 False 
+ 0 	 192014 	 0.38 	 43.25 	 82.32 	 337.43 	 557.82 	 False 	 False 	 False 	 False 
+ 0 	 35905 	 0.36 	 43.05 	 86.49 	 56.10 	 294.42 	 False 	 False 	 False 	 False 
+ 0 	 35905 	 0.36 	 43.05 	 86.49 	 56.10 	 294.42 	 False 	 False 	 False 	 False 
+ 0 	 35905 	 0.36 	 43.05 	 86.49 	 56.10 	 294.42 	 False 	 False 	 False 	 False 
+ 0 	 35905 	 0.36 	 43.05 	 86.49 	 56.10 	 294.42 	 False 	 False 	 False 	 False 
+ 0 	 35905 	 0.36 	 43.05 	 86.49 	 56.10 	 294.42 	 False 	 False 	 False 	 False 
+ 0 	 35905 	 0.36 	 43.05 	 86.49 	 56.10 	 294.42 	 False 	 False 	 False 	 False 
+ 0 	 35905 	 0.36 	 43.05 	 86.49 	 56.10 	 294.42 	 False 	 False 	 False 	 False 
+ 0 	 35905 	 0.36 	 43.05 	 86.49 	 56.10 	 294.42 	 False 	 False 	 False 	 False 
+ 

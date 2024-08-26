@@ -42,7 +42,7 @@ WARNING: The FRB Mock generator for Phased Arrays consumes a lot of Memory due t
 
 # Necessary libraries.
 import numpy as np
-from tqdm import trange
+#from tqdm import trange
 import math as math
 from frblip import FastRadioBursts, RadioTelescope
 from astropy import units as u
@@ -61,8 +61,8 @@ output_counter    = '/home/lazarolima/Script_Gabriel/counter_frb.dat'
 output_details    = '/home/lazarolima/Script_Gabriel/frb_details.dat'
 
 # Number of days and cpus
-cpus = 1
-days = 1
+cpus = 6
+days = 10
 
 # Beams information (except BINGO beams) 
 num_stations  = 1
@@ -82,7 +82,7 @@ localization_per_baseline_snr = 1.0
 
 # Cosmology and observarion
 spectral_index = 0.0     # Spectral Index distribution.
-zmax           = 6.0     # z max for FRB in cosmological FRBs
+zmax           = 6    # z max for FRB in cosmological FRBs
 dec            = (-90.0,90.0) # Survey dec
 
 # DM_host model
@@ -113,9 +113,9 @@ telescopes['MAIN'] = RadioTelescope(input_main_name, system_temperature=70*u.K)
 telescopes['ARRAY'] = RadioTelescope(input_array_name, system_temperature=70*u.K)
 
 # SETUP THE INTF KEYS AND THE AMOUNT OF INTF
-observ_keys   = ['MAIN', 'ARRAY', 'INTF_ARRAY', 'INTF_MAIN_ARRAY']
-inter_keys    = ['INTF_ARRAY', 'INTF_MAIN_ARRAY']
-inter_indices = [2,3]
+observ_keys   = ['MAIN', 'ARRAY', 'INTF_MAIN_ARRAY']
+inter_keys    = ['INTF_MAIN_ARRAY']
+inter_indices = [1,2]
 
 total_observ = len(observ_keys)
 
@@ -159,12 +159,25 @@ with pymp.Parallel(cpus) as P:
         #np.random.seed(i + int(seed_starter))
         np.random.seed(0)
         mock = FastRadioBursts(verbose = True, spectral_index = spectral_index, zmax = zmax, host_model = host_model, host_dist = host_dist, dec_range = dec)
-        altaz = mock.altaz(main_location)
-        mock.observe(telescopes, altaz = altaz, verbose = False)
+        #altaz = mock.altaz(main_location)
+        #mock.observe(telescopes, altaz = altaz, verbose = False)
+        mock.observe(telescopes, verbose = False)
         mock.interferometry('MAIN', 'ARRAY')
-        mock.interferometry('ARRAY')
+        #mock.interferometry('ARRAY')
 
-        snr = mock.signal_to_noise(observ_keys)
+
+        """snr = mock.signal_to_noise(observ_keys)
+
+        for j in range(total_observ):
+            where = np.unique(np.where(snr[observ_keys[j]] > minimum_snr)[0])
+            if (np.array(where).size > 0):
+                for k in range(np.array(where).size):
+                    frb_candidates.append(where[k])"""
+        
+        # SNR Calculation
+        snr = {}
+        for key in observ_keys:
+            snr[key] = mock.signal_to_noise(key, todense=True, total=True)
 
         for j in range(total_observ):
             where = np.unique(np.where(snr[observ_keys[j]] > minimum_snr)[0])
@@ -212,15 +225,26 @@ with pymp.Parallel(cpus) as P:
 
         for j in range(num_candidates_day):
             for k in inter_indices:
-                if (k == 2):
-                    sum_intf[j] += multi_intf_array * (np.array(snr[observ_keys[k]])[list(set(frb_candidates))[j]]**2).sum(0)
-                    count_localization += ((np.array(snr[observ_keys[k]])[list(set(frb_candidates))[j]]) > localization_per_baseline_snr).sum()
+                key = observ_keys[k]
+                snr_array = np.array(snr[key])
+                candidate_index = list(set(frb_candidates))[j]
+
+                if k == 2:
+                    if candidate_index < len(snr_array):
+                        sum_intf[j] += multi_intf_array * (snr_array[candidate_index] ** 2).sum(0)
+                        count_localization += (snr_array[candidate_index] > localization_per_baseline_snr).sum()
+                    else:
+                        print(f"Candidate index {candidate_index} out of range for snr_array")
                 else:
-                    for l in range (28):
-                        sum_intf[j] += num_stations * (np.array(snr[observ_keys[k]])[list(set(frb_candidates))[j],l]**2).sum(0)
-                        count_localization += ((np.array(snr[observ_keys[k]])[list(set(frb_candidates))[j],l]) > localization_per_baseline_snr).sum()
-                        if (((np.array(snr[observ_keys[k]])[list(set(frb_candidates))[j],l]) > localization_per_baseline_snr).sum() >= 1):
+                    if candidate_index < len(snr_array):
+                        sum_intf[j] += num_stations * (snr_array[candidate_index] ** 2).sum(0)
+                        count_localization += (snr_array[candidate_index] > localization_per_baseline_snr).sum()
+                        if (snr_array[candidate_index] > localization_per_baseline_snr).sum() >= 1:
                             main_contribution += 1
+                    else:
+                        print(f"Candidate index {candidate_index} out of range for snr_array")
+
+
 
             if (np.sqrt(sum_intf[j]) > localization_total_snr) and (np.sqrt(sum_observ[j]) > detection_snr) and (count_localization >= 1):
                 num_localization_1 += 1
