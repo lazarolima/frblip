@@ -62,7 +62,7 @@ output_details    = '/home/lazarolima/Script_Gabriel/frb_details.dat'
 
 # Number of days and cpus
 cpus = 6
-days = 10
+days = 5
 
 # Beams information (except BINGO beams) 
 num_stations  = 1
@@ -82,7 +82,7 @@ localization_per_baseline_snr = 1.0
 
 # Cosmology and observarion
 spectral_index = 0.0     # Spectral Index distribution.
-zmax           = 6    # z max for FRB in cosmological FRBs
+zmax           = 10    # z max for FRB in cosmological FRBs
 dec            = (-90.0,90.0) # Survey dec
 
 # DM_host model
@@ -158,11 +158,11 @@ with pymp.Parallel(cpus) as P:
         candidates_matrix.append([[],[],[],[],[],[],[],[],[],[],[],[]]) #Day, No, redshift, logL, alt, az, DM, candidate?, detected?, in 1baseline?, in 2 baselines?, by BINGO?
         #np.random.seed(i + int(seed_starter))
         np.random.seed(0)
-        mock = FastRadioBursts(verbose = True, spectral_index = spectral_index, zmax = zmax, host_model = host_model, host_dist = host_dist, dec_range = dec)
+        mock = FastRadioBursts(random_state=42, duration=days, verbose = True, spectral_index = spectral_index, zmax = zmax, host_model = host_model, host_dist = host_dist, dec_range = dec)
         #altaz = mock.altaz(main_location)
         #mock.observe(telescopes, altaz = altaz, verbose = False)
-        mock.observe(telescopes, verbose = False)
-        mock.interferometry('MAIN', 'ARRAY')
+        mock.observe(telescopes, verbose = False, location=main_location)
+        mock.interferometry('MAIN', 'ARRAY', overwrite=True)
         #mock.interferometry('ARRAY')
 
 
