@@ -1,5 +1,5 @@
 # Test files
-*.ipynb
+#*.ipynb
 *.pdf
 *.npz
 *.npy
