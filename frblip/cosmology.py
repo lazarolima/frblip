@@ -298,7 +298,7 @@ class Cosmology(pyccl.Cosmology):
     ) -> units.Quantity:
 
         return self._nonlin_electron_power(k.value, z)
-
+ 
     def _dm_igm_integral(
         self,
         z: float | numpy.ndarray,

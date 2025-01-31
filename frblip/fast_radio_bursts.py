@@ -289,13 +289,13 @@ class FastRadioBursts(BasicSampler):
     def _xmin(self) -> units.Quantity:
         dlogL = self.log_L0 - self.log_Lstar
         return dlogL.to(1).value
-
+    
     @cached_property
     def _zdist(self) -> Redshift:
         return Redshift(
             zmin=self.zmin, zmax=self.zmax, cosmology=self._cosmology
         )
-
+    
     @cached_property
     def _lumdist(self) -> Schechter:
         return Schechter(self._xmin, self.gamma)
