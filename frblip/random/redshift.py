@@ -1,6 +1,6 @@
 import numpy
 from astropy import units
-from scipy.integrate import cumtrapz
+from scipy.integrate import cumulative_trapezoid as cumtrapz
 from scipy.stats import rv_continuous
 from scipy.stats import gamma # added by Lázaro Lima 09/12/2024
 
@@ -12,16 +12,16 @@ class Redshift(rv_continuous):
     #     zmax: float = 6.0,
     #     cosmology: str | None = None,
     #     eps: float = 1e-3,
-    # ): 
+    # ):
 
     def __init__(
             self, 
-            k: float = 1.2001, 
-            theta: float = 0.2169, 
+            k: float = 1.4597, 
+            theta: float = 0.1542, 
             zmin: float = 0, 
             zmax: float = 6, 
             eps: float = 1e-3, 
-            loc: float = 0.0029, 
+            loc: float = -0.0018, 
             cosmology: str | None = None,):
         
         self.k = k  # Shape
